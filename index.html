@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div id="error-container" class="hidden">
+            <p id="error-message"></p>
+        </div>
+        
+        <div id="loading-container" class="hidden">
+            <div class="loader"></div>
+            <p>Fetching weather data...</p>
+        </div>
+        
+        <div id="weather-container" class="hidden">
+            <div class="weather-header">
+                <h2 id="city-name"></h2>
+                <p id="current-date"></p>
+            </div>
+            
+            <div class="weather-main">
+                <div class="weather-icon-temp">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                    <h2 id="temperature"></h2>
+                </div>
+                <p id="weather-description"></p>
+            </div>
+            
+            <div class="weather-details">
+                <div class="detail">
+                    <i class="fas fa-thermometer-half"></i>
+                    <div>
+                        <p>Feels Like</p>
+                        <p id="feels-like"></p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <p>Humidity</p>
+                        <p id="humidity"></p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <p>Wind Speed</p>
+                        <p id="wind-speed"></p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                    <div>
+                        <p>Pressure</p>
+                        <p id="pressure"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
